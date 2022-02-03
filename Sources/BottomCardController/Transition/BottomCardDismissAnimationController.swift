@@ -11,7 +11,7 @@ import UIKit
 /** Анимация при сворачивании карточки  */
 public final class BottomCardDismissAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
 
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard
             let presentedViewController = transitionContext.viewController(forKey: .from)
         else { return }
@@ -34,7 +34,7 @@ public final class BottomCardDismissAnimationController: NSObject, UIViewControl
         }
     }
 
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
 

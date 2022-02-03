@@ -11,7 +11,7 @@ import UIKit
 /** Анимация при открытии карточки */
 public final class BottomCardPresentationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
 
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let presentedViewController = transitionContext.viewController(forKey: .to) else { return }
 
         let containerView = transitionContext.containerView
@@ -34,7 +34,7 @@ public final class BottomCardPresentationAnimationController: NSObject, UIViewCo
         })
     }
 
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
 
