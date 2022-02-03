@@ -8,8 +8,8 @@
 
 import UIKit
 
-/** Transition for dismissing ViewContoller */
-final class BottomCardDismissAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
+/** Анимация при сворачивании карточки  */
+public final class BottomCardDismissAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard

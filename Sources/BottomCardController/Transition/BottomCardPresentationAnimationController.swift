@@ -9,7 +9,7 @@
 import UIKit
 
 /** Анимация при открытии карточки */
-final class BottomCardPresentationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
+public final class BottomCardPresentationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let presentedViewController = transitionContext.viewController(forKey: .to) else { return }

@@ -10,7 +10,7 @@ import UIKit
 
 public class BottomCardPresentationController: UIPresentationController, UIGestureRecognizerDelegate {
 
-    // MARK:- UI
+    // MARK: - UI
 
     public private(set) var closeButton = BottomCardCloseButton()
     public private(set) lazy var homeIndicatorView: UIView = {
@@ -34,26 +34,26 @@ public class BottomCardPresentationController: UIPresentationController, UIGestu
     var tapAroundToDismissEnabled: Bool = true
 
     /** Показывается ли кнопка закрытия карточки */
-    var showCloseButton: Bool = false
+    public var showCloseButton: Bool = false
 
     /** Показывается ли home индикатор */
-    var showIndicator: Bool = true
+    public var showIndicator: Bool = true
 
     /** Цвет home индикатора */
-    var indicatorColor = UIColor(red: 0.45, green: 0.45, blue: 0.45, alpha: 1.00)
+    public var indicatorColor = UIColor(red: 0.45, green: 0.45, blue: 0.45, alpha: 1.00)
 
     /** Прятать ли home индикатор при скролле */
     var hideIndicatorWhenScroll: Bool = false
 
     /** Высота кастомной карточки */
-    var customHeight: CGFloat? = nil {
+    public var customHeight: CGFloat? = nil {
         didSet {
             presentedViewController.view?.frame = frameOfPresentedViewInContainerView
         }
     }
 
     /** Минимальная высота для сворачивания карточки при свайпе */
-    var translateForDismiss: CGFloat = 200
+    public var translateForDismiss: CGFloat = 200
 
     /** Тактильная отдача при сворачивании */
     var hapticMoments: [BottomCardHapticMoments] = [.willDismissIfRelease]
@@ -63,7 +63,7 @@ public class BottomCardPresentationController: UIPresentationController, UIGestu
 
     // MARK: Delegates
 
-    var transitioningDelegate: BottomCardTransitioningDelegate?
+    public var transitioningDelegate: BottomCardTransitioningDelegate?
     weak var storkDelegate: BottomCardControllerDelegate?
     weak var confirmDelegate: BottomCardControllerConfirmDelegate?
 
@@ -94,7 +94,7 @@ public class BottomCardPresentationController: UIPresentationController, UIGestu
     private var keyboardOffset: CGFloat = 0
     private let alpha: CGFloat =  0.51
     /** Corner radius for bottom card */
-    var cornerRadius: CGFloat = 24
+    public var cornerRadius: CGFloat = 24
 
     private var scaleForPresentingView: CGFloat {
         guard let containerView = containerView else { return 0 }
